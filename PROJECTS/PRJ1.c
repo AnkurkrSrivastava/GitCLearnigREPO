@@ -13,10 +13,18 @@ int main()
     int attempts = 0;
     printf("Welcome to the Guessing Game!\n");
 
-    while (1)
+    while (1) // Infinite loop until the user guesses the number as 1 is always true
     {
-        printf("Guess a number between 0 and 100:\n");
-        scanf("%d", &guess);
+        if (scanf("%d", &guess) != 1)
+        {
+            // scanf failed to read an integer
+            printf("Invalid input! Please enter a valid number.\n");
+
+            // Clear the input buffer
+            while (getchar() != '\n');
+
+            continue; // Skip this iteration
+        }
         if (guess < 0 || guess > 100)
         {
             printf("Invalid input! Please enter a number between 0 and 100:\n");
