@@ -1,3 +1,5 @@
+// C program to compare two strings
+
 #include <stdio.h>
 
 int main()

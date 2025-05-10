@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-void str
 
 int main(){
     printf("Enter an integer: ");
