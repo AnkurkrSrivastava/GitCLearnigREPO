@@ -9,7 +9,7 @@ int main()
     int n = strlen(str);
     for (int i = 0; i < n; i++)
     {
-        str[i] = str[i] + 1; // Decrement each character by 1
+        str[i] = str[i] + 1; //Increment each character by 1
     }
     printf("Encrypted Key for the String is: %s\n", str); // Print the modified string
 
