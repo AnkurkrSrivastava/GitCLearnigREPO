@@ -1,22 +1,17 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(){
-    printf("Entert a number: ");
-    int num;
-    scanf("%d", &num);
-    if(num > 0)
+int main()
 {
-    for (int i = 0; i >=0 ; i++)
+    char str[100];
+    printf("Enter a String or number you want to encrypt: ");
+    fgets(str,sizeof(str),stdin);
+    int n = strlen(str);
+    for (int i = 0; i < n; i++)
     {
-        char str[] = "ifmmp";
-        for (int i = 0; str[i] != '\0'; i++)
-        {
-            str[i] = str[i] - 1; // Decrement each character by 1
-        }
-        printf("So i wanted to tell you: %s\n", str); // Print the modified string
+        str[i] = str[i] + 1; // Decrement each character by 1
     }
-}
-    
+    printf("Encrypted Key for the String is: %s\n", str); // Print the modified string
+
     return 0;
 }
